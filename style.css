@@ -1,0 +1,61 @@
+body{
+    padding: 0 0 30px;
+    margin: 0px;
+}
+.arrow{
+    height: 500px;
+    width: auto;
+    background-color: rgb(37, 99, 235);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.menu ul li{
+    list-style-type: none;
+    display: inline;
+}
+.menu ul{
+    padding: 40px;
+}
+.teks h1,.teks p {
+    padding: 0 20px;
+
+}
+.teks h2{
+    padding: 0 20px;
+}
+
+li button {
+    background-color: transparent; 
+    color: white;
+    box-shadow: 0 0 5px black;
+    border: none;
+}
+li button:hover{
+    background-color: white;
+    color: black;
+}
+
+li input{
+    border-radius: 5px;
+}
+
+li button{
+    border-radius: 2px;
+}
+
+.box{
+    display: none;
+    width: 170px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+    background: white;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+
+.bawah{
+    padding-top: 15px;
+    display: flex;
+}

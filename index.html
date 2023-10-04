@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="arrow">
+            <div class="teks">
+                <h1 class="text-white">Job Board</h1>
+                <p class="text-white">Find your dream job</p>
+                <h2 class="text-white">4. Jobs Listed</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><button class="" type="submit">All Post</button></li>
+                    <li><input type="text" placeholder="Search" class="text-white"></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+<div class="bawah">
+    <div class="box">
+       <h1>Software engineer</h1>
+       <p>$50.00</p>
+       <ul>
+           <li>node.js</li>
+           <li>git</li>
+           <li>AWS</li>
+       </ul>
+    </div>
+    <div class="box">
+       <h1>JavaScript Developer</h1>
+       <p>$60.000</p>
+       <ul>
+           <li>node.js</li>
+           <li>git</li>
+           <li>AWS</li>
+       </ul>
+    </div>
+    <div class="box">
+        <h1>Java Developer</h1>
+        <p>$35.000</p>
+        <ul>
+            <li>node.js</li>
+            <li>git</li>
+            <li>AWS</li>
+        </ul>
+    </div>
+    <div class="box">
+        <h1>Python Developer</h1>
+        <p>$80.000</p>
+        <ul>
+            <li>node.js</li>
+            <li>git</li>
+            <li>AWS</li>
+        </ul>
+     </div>
+</div>
+</body>
+<script>
+    const inputSearch = document.querySelector('li input');
+    const boxes = document.querySelectorAll('.box');
+    const allPostButton = document.querySelector("li button");
+
+    function showAllBoxes() {
+            boxes.forEach(function (box) {
+                box.style.display = "block";
+            });
+        }
+        allPostButton.addEventListener("click", function () {
+            showAllBoxes();
+        });
+    inputSearch.addEventListener('input', function () {
+        const searchTerm = inputSearch.value.toLowerCase();
+        boxes.forEach(box => {
+            const jobTitle = box.querySelector('h1').textContent.toLowerCase();
+            if (jobTitle.includes(searchTerm)) {
+                box.style.display = 'block';
+            } else {
+                box.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+</html>
